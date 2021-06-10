@@ -1,0 +1,17 @@
+.header {
+
+  display: flex;
+   margin: 0;
+   padding: 0;
+   
+}
+.left {
+  float: left;
+}
+.header__logo {
+  float: center;
+  height: 40px;
+}
+.right {
+  float: right;
+}
