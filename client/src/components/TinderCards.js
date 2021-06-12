@@ -77,8 +77,14 @@ function TinderCards() {
     const outOfFrame = (people) => {
        // console.log(""+path[1].match("/breeds/(.*)/")[1] + "left the screen");
         try{
-            console.log(people.toString().match("/breeds/(.*)/")[1] + "left the screen"); 
-            
+            const str = people.toString().match("/breeds/(.*)/");
+            //check if match exists
+            if(str){
+                //get first element
+                console.log(people.toString().match("/breeds/(.*)/")[1] + "left the screen"); 
+            }else {
+                console.log("The dogs breed doesn't exist");
+            }   
        }catch(e) {
            console.log(e);
        }

@@ -6,24 +6,26 @@ import IconButton from "@material-ui/core/IconButton";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import { Link, useHistory } from "react-router-dom";
 import Tinder from '../assets/tinder_logo.png';
+import axios from 'axios';
 
 function Header({ backButton }) {
   const history = useHistory();
+
+  
+
   return (
     <div className="header">
       <div className="box left">
 
       
-      {backButton ? (
-        <IconButton onClick={() => history.replace(backButton)}>
-          <ArrowBackIosIcon className="header__icon" fontSize="large" />
-        </IconButton>
-      ) : (
-        <IconButton>
-          <PersonIcon className="header__icon" fontSize="large" />
-        </IconButton>
+     
+        <Link to="/register">
+          <IconButton>
+            <PersonIcon className="header__icon" fontSize="large" />
+          </IconButton>
+        </Link>
+        
 
-      )}
       </div>
       <div className="box center">
         <Link to="/">
