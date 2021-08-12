@@ -5,9 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import SignUp from './components/Signup';
 
+import { Provider } from 'react-redux';
+import { BrowserRouter } from "react-router-dom";
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+  <BrowserRouter>
+      <App/>
+   </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

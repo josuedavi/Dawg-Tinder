@@ -18,14 +18,19 @@ function Header({ backButton }) {
       <div className="box left">
 
       
-     
+      {backButton ? (
+        <IconButton onClick={() => history.replace(backButton)}>
+          <ArrowBackIosIcon className="header__icon" fontSize="large" />
+        </IconButton>
+      ) : (
         <Link to="/register">
-          <IconButton>
+          <IconButton >
             <PersonIcon className="header__icon" fontSize="large" />
           </IconButton>
         </Link>
         
 
+      )}
       </div>
       <div className="box center">
         <Link to="/">
